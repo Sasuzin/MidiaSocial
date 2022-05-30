@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/home.css">
+  <title>Bem Social 222</title>
+</head>
+
+
+<body>
+  <header>
+    <img src="./Imagens/logo.svg" alt="Logo Bem Social">
+  </header>
+  <main class="main">
+
+    <!-- Formulário de postagem -->
+    <div class="newPost">
+
+      <div class="infoUser">
+        <div class="imgUser">
+        </div>
+        <strong>Luis Fel</strong>
+      </div>
+
+      <form action="" class="formPost" id="formPost">
+        <textarea name="textarea" placeholder="Digite sua mensagem..." id="textarea"></textarea>
+        <div class="iconsAndButton">
+          <div class="icons">
+            <button class="btnFileForm">
+              <img src="./Imagens/img.svg" alt="Adicionar uma imagem">
+            </button>
+            <button class="btnFileForm">
+              <img src="./Imagens/video.svg" alt="Adicionar um vídeo">
+            </button>
+          </div>
+
+           <button type="submit" id="botao" class="btnSubmitForm">Publicar</button></a>
+        </div>
+      </form>
+    </div>
+
+    <ul class="posts" id="posts"></ul>
+
+  </main>
+  <script type="module" src="JS/home.js"></script>
+</body>
+
+</html>
