@@ -13,3 +13,4 @@ Para deixar apenas numeros do campo é legal dar uma olhada em pattern.
 1- Quando ja tiver Cadastrando, pergunntar como fazer para redirecionar a pagina.
 2- Perguntar se vai ser necessario criar uma pagina de login para isso funcionar, caso precise, criar uma nova pag de login e perguntar como vincular com o localStorage para fazer a requisição.
 3- Se precisar do login, ver como após efetivar o login, como entrar na pag home.
+4- Após colocar o localStorage, ele não confirma se as senhas são iguais.

@@ -25,9 +25,11 @@ function checkInputs() {
     if(usernameValue === '') {
         // mostrar erro
         // add classe
-        setErrorFor(username, 'Preencha esse campo')
+        setErrorFor(username, 'Preencha esse campo');
+        return;
     } else if((usernameValue.leghth < 3) && (usernameValue.leghth >50)){
-        setErrorFor(username, 'O nome deve conter no minimo 3 letras e no maximo 50 letras')
+        setErrorFor(username, 'O nome deve conter no minimo 3 letras e no maximo 50 letras');
+        return;
         
     }
     else {
@@ -39,18 +41,22 @@ function checkInputs() {
     if(emailValue === '') {
         // mostrar erro
         // add classe
-        setErrorFor(email, 'Preencha esse campo')
+        setErrorFor(email, 'Preencha esse campo');
+        return;
     } else if (!isEmail(emailValue)) {
-        setErrorFor(email, 'Email inválido')
+        setErrorFor(email, 'Email inválido');
+        return;
     } else {
         // adicionar a classe de sucesso
         setSuccessFor(email)
+        
     }
    
     if(passwordValue === '') {
         // mostrar erro
         // add classe
-        setErrorFor(password, 'Preencha esse campo')
+        setErrorFor(password, 'Preencha esse campo');
+        return;
     } else{
         // adicionar a classe de sucesso
         setSuccessFor(password)
@@ -59,15 +65,18 @@ function checkInputs() {
      if(isUpperCase) {
          setSuccessFor (password)
      } else {
-         setErrorFor(password,"A primeira letra não é maiuscula")
+         setErrorFor(password,"A primeira letra não é maiuscula");
+         return;
      }
 
     if(passwordtwoValue === '') {
         // mostrar erro
         // add classe
-        setErrorFor(passwordtwo, 'Preencha esse campo')
+        setErrorFor(passwordtwo, 'Preencha esse campo');
+        return;
     } else if(passwordValue !== passwordtwoValue) { 
-        setErrorFor(passwordtwo, 'Senhas não tão iguais')
+        setErrorFor(passwordtwo, 'Senhas não tão iguais');
+        return;
     } else {
         // adicionar a classe de sucesso
         setSuccessFor(passwordtwo)
@@ -76,7 +85,8 @@ function checkInputs() {
     if(CPFValue === ''){
         // mostrar erro
         // add classe
-        setErrorFor(CPF, 'Preencha esse campo')
+        setErrorFor(CPF, 'Preencha esse campo');
+        return;
     } else{
         // adicionar a classe de sucesso
         setSuccessFor(CPF)
@@ -87,12 +97,22 @@ function checkInputs() {
         username: username.value,
         CPF: CPF.value,
         email: email.value,
-        password: password.value
+        password: password.value,
     });
+
+    let user = {
+        username: username.value,
+        CPF: CPF.value,
+        email: email.value,
+        password: password.value,
+    };
+    localStorage.setItem('user', JSON.stringify(user));
 
     localStorage.setItem('Users', JSON.stringify(users));
     let formRegister = document.getElementsByClassName('form');
     formRegister[0].style.display = 'none';
+
+    location.href = "home.html";
     
 
 }
