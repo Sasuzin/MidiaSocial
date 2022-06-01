@@ -124,3 +124,89 @@
     border-radius: 10px;
     transition: background 0.2s;
   }
+
+  ul.posts li.post div.infoUserPost div.name{
+    margin-left: 10px;
+  }
+
+  ul.posts li.post{
+    margin-bottom: 50px;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 1px 2px 2px rgba(0,0,0,0.05);
+  }
+
+  ul.posts li.post div.infoUserPost div.imgUserPost{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #333;
+  }
+  ul.posts li.post div.infoUserPost{
+    display: flex;
+    align-items: center;
+  }
+
+  ul.posts li.post div.infoUserPost div.name >strong{
+    color: #4682B4;
+  }
+
+  ul.posts li.post div.infoUserPost div.name >p{
+    color: #d1d1d1;
+    font-size: 12px;
+  }
+
+  ul.posts li.post >p{
+    width: 100%;
+    margin: 20px 0;
+    font-weight: bold;
+    color: #727272;
+  }
+
+  ul.posts li.post div.actionBtnPost button.filesPost{
+    padding: 5px 20px;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    margin-right: 10px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.2;
+  }
+
+  ul.posts li.post div.actionBtnPost{
+    display: flex;
+    align-items: center;
+
+  }
+
+  ul.posts li.post div.actionBtnPost button.filesPost img{
+    margin-right: 5px;
+  }
+
+  .like{
+    background: #EE82EE;
+  }
+  .like:hover{
+    background-color:#FF00FF ;
+  }
+
+  .comment{
+    background: #3CB371;
+  }
+  .comment:hover{
+    background-color:#00FF7F ;
+  }
+
+  .share{
+    background: #191970;
+  }
+  .share:hover{
+    background-color:#00008B ;
+  }
