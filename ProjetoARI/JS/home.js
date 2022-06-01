@@ -1,3 +1,17 @@
+let UserLogado = localStorage.getItem('user');
+if(!UserLogado) {
+    location.href= 'form.html';
+}
+
+
+
+
+
+
+
+
+
+
 /* document.addEventListener('DOMContentLoaded',()=>{
 
     const pincel ={
@@ -48,8 +62,3 @@
     //desenharLinha({pos:{x: 350,y: 250},posAnterior:{x: 10,y: 10}})
 })
 */ 
-
-let UserLogado = localStorage.getItem('user');
-    if(!UserLogado) {
-        location.href= 'form.html';
-    }
