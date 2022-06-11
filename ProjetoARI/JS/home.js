@@ -3,10 +3,41 @@ if(!UserLogado) {
     location.href= 'form.html';
 }
 
+let midia = document.getElementById('midia');
+let btnImg = document.getElementById('btnImg');
+let btnVideo = document.getElementById('btnVideo');
+let arquivoImg = document.getElementById("btnImg").files[0];
+let arquivoVideo = document.getElementById("btnVideo").files[0];
+
+function adcCoisas(file, type) {
+
+    var reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onloadend = function () {
+        console.log(arquivoImg);
+        //console.log(arquivoVideo);
+
+        if(type == "img"){
+            midia.innerHTML = ` <img src="${reader.result}" id = "postMidia" style="width:300px; height:300px;" >`; console.log('passou inerrHtml');
+            
+        } else if (btnVideo.value.trim() > 0){
+            midia.innerHTML = `<video src="${reader.result}" id = "postMidia" style="width:500px; height:500px;"> </video>`; console.log('passou inerrHtml');
+        }
+      }
+     
+    }
+  
 
 
+btnImg.onchange = function(){
+    console.log('entrando no adicionar coisas');
+    adcCoisas(arquivoImg, "img");
+    console.log('saindo');
+} 
 
-
+btnVideo.onchange = function(){
+    adcCoisas(arquivoVideo);
+} 
 
 
 

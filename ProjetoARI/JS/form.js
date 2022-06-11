@@ -27,7 +27,7 @@ function checkInputs() {
         // add classe
         setErrorFor(username, 'Preencha esse campo');
         return;
-    } else if((usernameValue.leghth < 3) && (usernameValue.leghth >50)){
+    } else if((usernameValue.leghth < 3) && (usernameValue.leghth > 50)){
         setErrorFor(username, 'O nome deve conter no minimo 3 letras e no maximo 50 letras');
         return;
         

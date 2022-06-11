@@ -17,7 +17,7 @@
   <main class="main">
 
     <!-- Formulário de postagem -->
-    <div class="newPost">
+    <div class="newPost" id="newPost">
 
       <div class="infoUser">
         <div class="imgUser">
@@ -29,14 +29,15 @@
         <textarea name="textarea" placeholder="Digite sua mensagem..." id="textarea"></textarea>
         <div class="iconsAndButton">
           <div class="icons">
-            <button class="btnFileForm" id="btnImg">
-              <img src="./Imagens/img.svg" alt="Adicionar uma imagem">
-            </button>
-            <button class="btnFileForm" id="btnVideo">
-              <img src="./Imagens/video.svg" alt="Adicionar um vídeo">
-            </button>
+            <input type="file" accept="image/jpg, image/png" style="display:none" class="btnFileForm" id="btnImg">
+              <img src="./Imagens/img.svg"  alt="Adicionar uma imagem" class="btnbtn" onclick="btnImg.click()">
+            </input>
+            <input type="file" accept="video/mp4" style="display:none" class="btnFileForm" id="btnVideo">
+              <img src="./Imagens/video.svg" alt="Adicionar um vídeo" class="btnbtn" onclick="btnVideo.click()">
+            </input>
           </div>
-
+          <br>
+          <div id="midia"></div>
            <button type="submit" id="botao" class="btnSubmitForm">Publicar</button>
         </div>
       </form>

@@ -34,7 +34,7 @@
   
   div.newPost{
     width:100%;
-    height: 240px;
+    height: 500px;
   
     display: flex;
     align-items: flex-start;
@@ -209,4 +209,8 @@
   }
   .share:hover{
     background-color:#00008B ;
+  }
+
+  .btnbtn{ 
+    cursor: pointer;
   }

@@ -20,10 +20,33 @@ export class FormPost{
     }
 
     addSubmit(){
-        const handleSubmit = (event) => {
-            event.preventDefault();
-            if (this.formValidate(this.textarea.value)){
-                const newPost = document.createElement('li');
+        
+            if (this.textarea.value.trim()){
+                console.log("testando");
+                let post = JSON.parse(localStorage.getItem("posts")) || [];
+                let user = JSON.parse(localStorage.getItem("user")) || [];
+                let arquivo = document.getElementById("postMidia") || "";
+                post.push({
+                    user:user.username,
+                    texto:this.textarea.value,
+                    tipo:arquivo.src.split("/")[0].split(":") [1],
+                    arquivo:arquivo.src
+                });
+                 localStorage.setItem("posts", JSON.stringify(post));   
+        } else{
+            alert('Verifique se o Campo não está vazio.')
+        }
+            
+            
+
+        this.onSubmit(handleSubmit)
+
+    }
+}
+const postForm = new FormPost('formPost','textarea','posts')
+
+function carregaPost() {
+    const newPost = document.createElement('li');
                     newPost.classList.add('post');
                     newPost.innerHTML = `
                     <div class="infoUserPost">
@@ -44,14 +67,4 @@ export class FormPost{
                         </div>`;
                             this.ulPost.append(newPost);
                             this.textarea.value = "";
-        } else{
-            alert('Verifique se o Campo não está vazio.')
-        }
-            }
-            
-
-        this.onSubmit(handleSubmit)
-
-    }
 }
-const postForm = new FormPost('formPost','textarea','posts')
