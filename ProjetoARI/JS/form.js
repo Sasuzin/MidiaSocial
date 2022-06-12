@@ -107,13 +107,11 @@ function checkInputs() {
         password: password.value,
     };
     localStorage.setItem('user', JSON.stringify(user));
-
     localStorage.setItem('Users', JSON.stringify(users));
-    let formRegister = document.getElementsByClassName('form');
-    formRegister[0].style.display = 'none';
-
+    localStorage.setItem('token',true);
+    alert("Entra ae");
     location.href = "home.html";
-    
+     return;
 
 }
 
@@ -136,14 +134,9 @@ function isEmail(email) {
     return /^(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/.test(email)
 }
 
-function mascara_cpf() {
-    let cpf = document.getElementById('CPF')
-        if(cpf.value.length == 3 || cpf.value.length == 7) {
-            cpf.value += "."
-        } else if (cpf.value.length == 11) {
-            cpf.value += "-"
-        }
-}
+
+
+
 
 
 

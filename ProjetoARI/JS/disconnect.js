@@ -1,7 +1,5 @@
 function logout(){
 
-
-    localStorage.removeItem('Session');
-    localStorage.removeItem('Token');
-    location.href='disconnect.html';
+    localStorage.removeItem('token');
+    location.href='form.html';
 }

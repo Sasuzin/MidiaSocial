@@ -1,7 +1,3 @@
-let UserLogado = localStorage.getItem('user');
-if(!UserLogado) {
-    location.href= 'form.html';
-}
 
 let midia = document.getElementById('midia');
 let btnImg = document.getElementById('btnImg');

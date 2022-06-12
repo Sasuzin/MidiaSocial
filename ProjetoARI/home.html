@@ -11,8 +11,17 @@
 
 
 <body>
+  <script>
+     if (localStorage.getItem("token") == null){
+     alert(localStorage.getItem("token"));
+      location.href="form.html";
+     }
+
+  </script>
+
   <header>
     <img src="./Imagens/borboleta.png" alt="Logo"> MidiaSocial
+    <a href="disconnect.html" >Logout</a>
   </header>
   <main class="main">
 
