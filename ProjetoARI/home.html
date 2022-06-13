@@ -11,53 +11,69 @@
 
 
 <body>
-  <script>
-     if (localStorage.getItem("token") == null){
-     alert(localStorage.getItem("token"));
-      location.href="form.html";
-     }
-
-  </script>
-
   <header>
-    <img src="./Imagens/borboleta.png" alt="Logo"> MidiaSocial
-    <a href="disconnect.html" >Logout</a>
+    <img src="./Imagens/logo.svg" alt="Logo Bem Social">
   </header>
   <main class="main">
 
     <!-- Formulário de postagem -->
-    <div class="newPost" id="newPost">
+    <div class="newPost">
 
       <div class="infoUser">
         <div class="imgUser">
         </div>
-        <strong>Username</strong>
+        <strong>Luis Fel</strong>
       </div>
 
       <form action="" class="formPost" id="formPost">
-        <textarea name="textarea" placeholder="Digite sua mensagem..." id="textarea"></textarea>
+        <textarea name="textarea" placeholder="Vamos mudar o mundo?" id="textarea"></textarea>
         <div class="iconsAndButton">
           <div class="icons">
-            <input type="file" accept="image/jpg, image/png" style="display:none" class="btnFileForm" id="btnImg">
-              <img src="./Imagens/img.svg"  alt="Adicionar uma imagem" class="btnbtn" onclick="btnImg.click()">
-            </input>
-            <input type="file" accept="video/mp4" style="display:none" class="btnFileForm" id="btnVideo">
-              <img src="./Imagens/video.svg" alt="Adicionar um vídeo" class="btnbtn" onclick="btnVideo.click()">
-            </input>
+            <img src="./Imagens/img.svg" alt="Selecione uma imagem" title="imagem" id="imgPhoto"
+                            style="width:30px;">
+
+                         <input type="file" id="flImage" name="fImage" accept="image/*" style="display:none">
+
+                         <img src="./Imagens/video.svg" alt="Selecione um video" title="video" id="myVideo"
+                            style="width:30px;">
+
+                        <input type="file" id="flVideo" name="fVideo" accept="video/*" style="display:none"
+                         style="width:30px;">
+
+                        <img src="./Imagens/audio.svg" title="Audio" alt="adicionar um audio" id="myAudio"
+                            style="width:30px;">
+
+                        <input type="file" id="flAudio" name="fAudio" accept="audio/*" style="display:none">
+
+                         <!--<img src="imagens/desenhar.png" alt="Faça um desenho"  title="desenho" id="myDraw"
+                            style="width:30px;" onclick="mostraDraw()">
+
+                        <input type="button" id="FlDraw" name="fDraw" style="width:30px;"> -->
+
+                    </div>
           </div>
-          <br>
-          <div id="midia"></div>
-           <button type="submit" id="botao" class="btnSubmitForm">Publicar</button>
+
+           <button type="submit" id="botao" class="btnSubmitForm">Publicar</button></a>
+        </div>
+        <div class="midia">
+
         </div>
       </form>
     </div>
 
-    <ul class="posts" id="posts">
-    </ul>
+    <ul class="posts" id="posts"></ul>
+
+    <div class='show-itens border border-dark border border-3'>
+
+      <img id="uploadImage" src="" alt="">
+            <video id="uploadVideo" src=""></video>
+            <audio id="uploadAudio" src=""></audio>
+            </div>
+      
 
   </main>
-  <script type="module" src="JS/home.js"></script>
-  <script type="module" src="JS/FormPost.js"></script>
+  <script  src="JS/home.js"></script>
+  <script  src="JS/FormPost.js"></script>
 </body>
 
 </html>

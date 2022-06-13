@@ -108,9 +108,9 @@ function checkInputs() {
     };
     localStorage.setItem('user', JSON.stringify(user));
     localStorage.setItem('Users', JSON.stringify(users));
-    localStorage.setItem('token',true);
+    //localStorage.setItem('token',true);
     alert("Entra ae");
-    location.href = "home.html";
+    window.location.href = "home.html";
      return;
 
 }
