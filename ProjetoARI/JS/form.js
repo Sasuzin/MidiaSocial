@@ -86,8 +86,8 @@ function checkInputs() {
         setSuccessFor(CPF)
     }
 
-    let users = JSON.parse(localStorage.getItem('Users')) || [];
-    users.push({
+    let listaUser = JSON.parse(localStorage.getItem('listaUser')) || [];
+    listaUser.push({
         username: username.value,
         CPF: CPF.value,
         email: email.value,
@@ -101,12 +101,9 @@ function checkInputs() {
         password: password.value,
     };
     localStorage.setItem('user', JSON.stringify(user));
-    localStorage.setItem('Users', JSON.stringify(users));
-    //localStorage.setItem('token',true);
-    ;
-    window.location.href = "login.html";
-     return;
+    localStorage.setItem('listaUser', JSON.stringify(listaUser));
 
+    window.location.href = "login.html";
 }
 
 function setErrorFor(input, message) {

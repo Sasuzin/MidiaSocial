@@ -11,10 +11,11 @@
 
     <div class="login">
         <h1>Login</h1>
+        <div id="msgError"></div>
         <form method="post">
             <input type="email" name="u" placeholder="Email" id='email' required="required" />
             <input type="password" name="p" placeholder="Digite sua senha" id='senha' required="required" />
-            <button type="submit" class="btn btn-primary btn-block btn-large" onclick="entrar()">Entrar</button>
+            <button type="button" class="btn btn-primary btn-block btn-large" onclick="entrar()">Entrar</button>
         </form>
     </div>
 
@@ -26,7 +27,6 @@
         <a href="form.html">Cadastre-se</a>
     </p>
     <script src="./JS/login.js"></script>
-    <script src="./form.html"></script>
 </body>
 </html>
 

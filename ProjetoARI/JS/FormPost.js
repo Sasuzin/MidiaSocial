@@ -36,7 +36,7 @@
                         <div class="imgUserPost"></div>
         
                             <div class="name">
-                                <strong>Username</strong>
+                                
                                 <br>
                                 <p>${geo}</p>
                             </div>
@@ -68,7 +68,7 @@
                  this.postVideo.mostrar = false;
                  this.postAudio.src = null;
                  this.postAudio.mostrar = false;
- 
+                
 
                  this.posts = [...this.posts, '<li class="post">' + newPost.innerHTML + '</li>'];
                  localStorage.setItem('posts', this.posts)
@@ -160,7 +160,7 @@ const flImage = document.querySelector("#flImage");
 
  let geo ="";
  const successCallBack = (position)=>{
-     geo = position.coords.latitude+','+position.coords.longitude;
+     geo = position.coords.latitude+','+ position.coords.longitude;
  }
  const errorCallBack = (position)=>{
      geo ='';
