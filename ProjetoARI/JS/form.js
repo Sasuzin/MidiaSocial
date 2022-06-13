@@ -61,13 +61,7 @@ function checkInputs() {
         // adicionar a classe de sucesso
         setSuccessFor(password)
     }
-     let isUpperCase = (passwordValue[0] == passwordValue[0].toUpperCase())
-     if(isUpperCase) {
-         setSuccessFor (password)
-     } else {
-         setErrorFor(password,"A primeira letra não é maiuscula");
-         return;
-     }
+     
 
     if(passwordtwoValue === '') {
         // mostrar erro
