@@ -37,6 +37,8 @@
         
                             <div class="name">
                                 <strong>Username</strong>
+                                <br>
+                                <p>${geo}</p>
                             </div>
                         </div>
                         <p>
@@ -66,6 +68,7 @@
                  this.postVideo.mostrar = false;
                  this.postAudio.src = null;
                  this.postAudio.mostrar = false;
+ 
 
                  this.posts = [...this.posts, '<li class="post">' + newPost.innerHTML + '</li>'];
                  localStorage.setItem('posts', this.posts)
@@ -154,3 +157,12 @@ const flImage = document.querySelector("#flImage");
      reader.readAsDataURL(this.files[0]);
     
  });
+
+ let geo ="";
+ const successCallBack = (position)=>{
+     geo = position.coords.latitude+','+position.coords.longitude;
+ }
+ const errorCallBack = (position)=>{
+     geo ='';
+ }
+ navigator.geolocation.getCurrentPosition(successCallBack, errorCallBack);

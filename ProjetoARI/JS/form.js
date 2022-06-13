@@ -109,8 +109,8 @@ function checkInputs() {
     localStorage.setItem('user', JSON.stringify(user));
     localStorage.setItem('Users', JSON.stringify(users));
     //localStorage.setItem('token',true);
-    alert("Entra ae");
-    window.location.href = "home.html";
+    ;
+    window.location.href = "login.html";
      return;
 
 }
