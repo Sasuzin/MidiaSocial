@@ -62,6 +62,17 @@
 
             <div class="form-control">
 
+                <label>Telefone</label>
+                <input type="tel" placeholder="(DDD)XXXXX-XXXX"  id="telefone" minlength="9" maxlength="12">
+                <i class="img-success" ><img src="Imagens/success-icon.svg" alt=""></i>
+                <i class="img-error" ><img src="Imagens/error-icon.svg" alt=""></i>
+
+                <small>Error Message</small>
+
+            </div>
+
+            <div class="form-control">
+
                 <label>CPF</label>
                 <input type="text" placeholder="000.000.000-00" id="CPF">
                 <i class="img-success" ><img src="Imagens/success-icon.svg" alt=""></i>
@@ -82,7 +93,8 @@
         var cleave = new Cleave('#CPF', {
     delimiters: ['.', '.', '-'],
     blocks: [3, 3, 3, 2],
-    uppercase: true
+    uppercase: true,
+    numericOnly:true
 });
     </script>
     

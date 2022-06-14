@@ -38,7 +38,7 @@
                             <div class="name">
                                 
                                 <br>
-                                <p>${geo}</p>
+                                <p style="color:black">Coordenada: ${geo}</p>
                             </div>
                         </div>
                         <p>

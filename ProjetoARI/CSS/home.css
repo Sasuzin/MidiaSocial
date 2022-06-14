@@ -27,6 +27,11 @@ header{
   box-shadow: 1px 0 3px rgba(0,0,0,0.4);
 }
 
+header button{
+  justify-content: right;
+  align-items:flex-end;
+}
+
 .main{
   max-width: 900px;
   margin: 0 auto;
@@ -215,4 +220,12 @@ div.newPost form.formPost div.iconsAndButton button.btnSubmitForm{
     cursor: pointer;
   }
 
-  
+  #logout{
+    margin: 10px 0px 0px 10px;
+    color: white;
+    background:#FF1493 ;
+    border-radius: 5px;
+    border: 0px;
+    width: 100px;
+    height: 35px;
+  }
