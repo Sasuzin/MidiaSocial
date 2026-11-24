@@ -779,6 +779,12 @@
   renderFilters();
   updateComposer();
 
+  // Atalho do app instalado ("Fazer um desenho"): home.html#desenhar
+  if (window.location.hash === '#desenhar') {
+    history.replaceState(null, '', window.location.pathname);
+    DrawingStudio.open();
+  }
+
   Store.getPosts()
     .then((posts) => {
       state.posts = posts;

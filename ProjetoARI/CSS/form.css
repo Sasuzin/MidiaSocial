@@ -272,10 +272,16 @@
   padding: 72px 24px 32px;
 }
 
-.theme-toggle {
+.auth-actions {
   position: absolute;
   top: 20px;
   right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.theme-toggle {
   background: var(--surface);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-sm);
@@ -694,8 +700,8 @@
     margin-top: -12px;
   }
 
-  /* o botão de tema fica fixo no canto no mobile */
-  .theme-toggle {
+  /* tema e instalar ficam fixos no canto no mobile */
+  .auth-actions {
     position: fixed;
     top: 16px;
     right: 16px;

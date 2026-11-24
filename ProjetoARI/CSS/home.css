@@ -1429,8 +1429,14 @@ kbd {
   }
 
   .user-chip-name,
-  .logout-label {
+  .logout-label,
+  .install-label {
     display: none;
+  }
+
+  .install-btn {
+    width: 40px;
+    padding: 0;
   }
 
   .user-chip {

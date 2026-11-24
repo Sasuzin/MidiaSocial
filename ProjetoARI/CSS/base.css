@@ -368,6 +368,20 @@ li {
   height: 18px;
 }
 
+/* Botão "Instalar app" (PWA) — só aparece quando o navegador permite instalar */
+.install-btn {
+  background: var(--surface);
+  color: var(--primary-text);
+  border-color: var(--border);
+  box-shadow: var(--shadow-sm);
+  animation: popIn 0.4s var(--spring);
+}
+
+.install-btn:hover:not(:disabled) {
+  background: var(--primary-soft);
+  border-color: color-mix(in srgb, var(--primary) 35%, var(--border));
+}
+
 .btn-icon {
   width: 40px;
   height: 40px;
