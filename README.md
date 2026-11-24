@@ -163,7 +163,16 @@ python -m http.server 5500
 **3. Abra no navegador:** <http://localhost:5500>
 
 > [!TIP]
-> No VS Code, a extensão **Live Server** faz o mesmo com um clique. Também é possível publicar a pasta `ProjetoARI` no **GitHub Pages**.
+> No VS Code, a extensão **Live Server** faz o mesmo com um clique.
+
+### 🌐 Publicar no GitHub Pages
+
+O projeto é 100% estático, então roda no GitHub Pages sem nenhuma adaptação. O `index.html` da raiz do repositório leva o visitante direto para a pasta `ProjetoARI/`.
+
+1. No GitHub, abra **Settings → Pages**.
+2. Em **Build and deployment**, escolha **Deploy from a branch**.
+3. Selecione a branch (ex.: `main`) e a pasta **`/ (root)`** — não use `/docs`, que guarda só as imagens deste README.
+4. Salve e aguarde alguns minutos: o site fica em `https://<usuario>.github.io/MidiaSocial/`.
 
 ---
 
@@ -196,6 +205,7 @@ O IndexedDB foi escolhido para as publicações porque guarda arquivos grandes (
 ```text
 MidiaSocial/
 ├── README.md
+├── index.html                # redireciona para ProjetoARI/ (GitHub Pages)
 ├── docs/
 │   └── screenshots/          # imagens usadas neste README
 └── ProjetoARI/
