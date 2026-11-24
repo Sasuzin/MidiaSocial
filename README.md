@@ -16,6 +16,13 @@ Uma rede social que roda **inteira no navegador** — publique textos, fotos, v�
 ![Canvas](https://img.shields.io/badge/Canvas%202D-6D4AFF?style=for-the-badge)
 ![IndexedDB](https://img.shields.io/badge/IndexedDB-A45BFF?style=for-the-badge)
 ![Dependências](https://img.shields.io/badge/depend%C3%AAncias-zero-FF5F86?style=for-the-badge)
+![PWA](https://img.shields.io/badge/PWA-instal%C3%A1vel-5A0FC8?style=for-the-badge&logo=pwa&logoColor=white)
+
+<br>
+
+### [🌐 Acessar o Bem Social](https://sasuzin.github.io/MidiaSocial/)
+
+<sub>Funciona no computador e no celular — e pode ser instalado como aplicativo.</sub>
 
 <br>
 
@@ -29,6 +36,7 @@ Uma rede social que roda **inteira no navegador** — publique textos, fotos, v�
 **[Sobre](#-sobre-o-projeto)** ·
 **[Destaques](#-destaques)** ·
 **[Tour](#-tour-pelas-funcionalidades)** ·
+**[Instalar](#8-instale-como-aplicativo-pwa)** ·
 **[Requisitos](#-requisitos-do-projeto)** ·
 **[Como rodar](#-como-rodar)** ·
 **[Tecnologias](#-tecnologias)** ·
@@ -81,6 +89,20 @@ O resultado é uma rede social completa que funciona **sem servidor**: contas, s
     <td valign="top">
       <h3>✨ Animado</h3>
       Transições entre telas, entrada dos posts, curtidas com “pop”, toasts e muito mais.
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <h3>📲 Vira aplicativo</h3>
+      É um PWA: instale no celular ou no computador e abra pelo ícone, em tela própria.
+    </td>
+    <td valign="top">
+      <h3>📴 Funciona offline</h3>
+      Depois da primeira visita, o app abre mesmo sem internet — com seus posts e desenhos.
+    </td>
+    <td valign="top">
+      <h3>🌐 No ar</h3>
+      Publicado no GitHub Pages: <a href="https://sasuzin.github.io/MidiaSocial/">sasuzin.github.io/MidiaSocial</a>.
     </td>
   </tr>
 </table>
@@ -240,6 +262,32 @@ Tudo isso com o mesmo código — só CSS responsivo e *container queries*.
 
 ---
 
+### 8. Instale como aplicativo (PWA)
+
+O Bem Social é um **Progressive Web App**: dá para adicionar à tela inicial do celular ou instalar no computador. Ele abre em janela própria, com ícone, sem a barra do navegador — igual a um app de loja.
+
+<table>
+  <tr>
+    <td align="center" width="120"><img src="ProjetoARI/Imagens/icons/icon-192.png" alt="Ícone do app" width="96"></td>
+    <td>
+
+| Onde | Como instalar |
+| --- | --- |
+| **Android** (Chrome) | Toque no botão **Instalar app** no topo da página, ou menu ⋮ → **Instalar app** |
+| **Computador** (Chrome / Edge) | Clique em **Instalar app** no topo, ou no ícone de instalar na barra de endereço |
+| **iPhone / iPad** (Safari) | Toque em **Compartilhar** → **Adicionar à Tela de Início** (o botão do app mostra essa dica) |
+
+</td>
+  </tr>
+</table>
+
+- 📴 **Offline**: na primeira visita, um *service worker* guarda os arquivos do app. Depois disso ele abre mesmo sem internet, com as publicações salvas no aparelho.
+- 🔄 **Sempre atualizado**: com internet, o app busca primeiro a versão mais nova publicada no GitHub Pages e atualiza a cópia guardada — não fica preso numa versão antiga.
+- 🎨 **Atalho “Fazer um desenho”**: no app instalado, pressione (ou clique com o botão direito) no ícone para abrir direto a tela de desenho.
+- 🖼️ Ícones próprios, inclusive o formato *maskable* do Android e o ícone do iPhone.
+
+---
+
 ## ✅ Requisitos do projeto
 
 Checklist dos requisitos pedidos no enunciado:
@@ -265,8 +313,8 @@ Checklist dos requisitos pedidos no enunciado:
 - [x] Animações de transição
 - [x] Adaptável a computador e celular
 - [x] Roda apenas no navegador, sem servidor
-- [ ] Instalável como aplicativo (**PWA**)
-- [ ] Hospedado no **GitHub Pages** (o repositório já está preparado — veja abaixo)
+- [x] Instalável como aplicativo (**PWA**), com funcionamento offline
+- [x] Hospedado no **GitHub Pages** — [sasuzin.github.io/MidiaSocial](https://sasuzin.github.io/MidiaSocial/)
 
 ### Fluxo de navegação
 
@@ -293,7 +341,7 @@ git clone https://github.com/Sasuzin/MidiaSocial.git
 cd MidiaSocial/ProjetoARI
 ```
 
-**2. Suba um servidor local** (recomendado — a localização só funciona em `localhost` ou HTTPS)
+**2. Suba um servidor local** (recomendado — a localização e o modo offline/PWA só funcionam em `localhost` ou HTTPS)
 
 ```bash
 python -m http.server 5500
@@ -306,7 +354,9 @@ python -m http.server 5500
 
 ### 🌐 Publicar no GitHub Pages
 
-O projeto é 100% estático, então roda no GitHub Pages sem nenhuma adaptação. O `index.html` da raiz do repositório leva o visitante direto para a pasta `ProjetoARI/`.
+O site oficial está em **<https://sasuzin.github.io/MidiaSocial/>** e é atualizado automaticamente a cada push na branch `main`.
+
+O projeto é 100% estático, então roda no GitHub Pages sem nenhuma adaptação. O `index.html` da raiz do repositório leva o visitante direto para a pasta `ProjetoARI/`. Para publicar em outro repositório (um fork, por exemplo):
 
 1. No GitHub, abra **Settings → Pages**.
 2. Em **Build and deployment**, escolha **Deploy from a branch**.
@@ -324,6 +374,7 @@ O projeto é 100% estático, então roda no GitHub Pages sem nenhuma adaptação
 | **Lógica** | JavaScript puro (ES2020+), sem frameworks nem bibliotecas |
 | **Desenho** | Canvas 2D + Pointer Events (mouse, toque e caneta) |
 | **Dados** | `localStorage` (usuários, sessão, tema) e **IndexedDB** (publicações e arquivos de mídia) |
+| **PWA** | Web App Manifest, Service Worker e Cache API (offline + atualização automática), ícones *maskable* |
 | **Recursos** | Geolocation API, File API / Blob / Object URLs, `Intl.RelativeTimeFormat`, View Transitions API |
 
 <details>
@@ -337,6 +388,7 @@ O projeto é 100% estático, então roda no GitHub Pages sem nenhuma adaptação
 | localStorage | `usuarioLogado` | Email de quem está logado |
 | localStorage | `tema` | Tema escolhido (`light` / `dark`) |
 | IndexedDB | `bem-social` → `posts` | Publicações, curtidas e mídias (fotos, vídeos, áudios e desenhos) |
+| Cache API | `bem-social-app-v1` / `bem-social-fontes` | Cópia dos arquivos do app e das fontes, para funcionar offline |
 
 O IndexedDB foi escolhido para as publicações porque guarda arquivos grandes (como vídeos) sem estourar o limite de ~5 MB do localStorage.
 
@@ -368,6 +420,8 @@ MidiaSocial/
     ├── index.html            # redireciona para login ou linha do tempo
     ├── form.html             # login + cadastro
     ├── home.html             # linha do tempo + tela de desenho
+    ├── manifest.json         # manifesto do PWA (nome, ícones, cores, atalho)
+    ├── sw.js                 # service worker: offline + atualização automática
     ├── CSS/
     │   ├── base.css          # tokens de design, temas, botões, toasts, animações
     │   ├── form.css          # página de acesso
@@ -375,19 +429,20 @@ MidiaSocial/
     ├── JS/
     │   ├── storage.js        # usuários, sessão (localStorage) e posts (IndexedDB)
     │   ├── ui.js             # ícones, avatares, toasts, tema e transições
+    │   ├── pwa.js            # registra o service worker e o botão "Instalar app"
     │   ├── form.js           # abas, máscaras e validações do login/cadastro
     │   ├── drawing.js        # estúdio de desenho (canvas)
     │   └── home.js           # editor de publicação, feed, filtros, curtidas
-    └── Imagens/              # logo, favicon e ícones
+    └── Imagens/              # favicon e ícones
+        └── icons/            # ícones do app (192, 512, maskable, iPhone)
 ```
 
 ---
 
 ## 🧭 Próximos passos
 
-- [ ] Transformar em **PWA** (manifest + service worker) para instalar na tela inicial do celular
-- [ ] Ativar o **GitHub Pages** na branch `main`
 - [ ] Comentários nas publicações
+- [ ] Notificações de novas curtidas
 - [ ] Mais ferramentas de desenho (balde de tinta, formas, texto)
 
 ---

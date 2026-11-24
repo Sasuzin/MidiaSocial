@@ -8,6 +8,12 @@
   <title>Entrar · Bem Social</title>
   <script>try { const t = localStorage.getItem('tema'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
   <link rel="icon" href="Imagens/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="Imagens/icons/apple-touch-icon.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Bem Social">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400..800&display=swap" rel="stylesheet">
@@ -37,6 +43,7 @@
     <symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></symbol>
     <symbol id="i-alert-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></symbol>
     <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></symbol>
     <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
     <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></symbol>
     <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
@@ -105,9 +112,14 @@
 
     <!-- Lado do formulário -->
     <section class="auth-panel">
-      <button class="btn-icon theme-toggle" id="themeToggle" type="button" aria-label="Alternar tema">
-        <svg class="icon"><use href="#i-moon"/></svg>
-      </button>
+      <div class="auth-actions">
+        <button class="btn btn-sm install-btn" type="button" data-install-app hidden>
+          <svg class="icon"><use href="#i-download"/></svg><span>Instalar app</span>
+        </button>
+        <button class="btn-icon theme-toggle" id="themeToggle" type="button" aria-label="Alternar tema">
+          <svg class="icon"><use href="#i-moon"/></svg>
+        </button>
+      </div>
 
       <div class="auth-card enter" style="--d: 120ms" data-active="login">
         <header class="auth-card-head">
@@ -259,6 +271,7 @@
 
   <script src="JS/storage.js"></script>
   <script src="JS/ui.js"></script>
+  <script src="JS/pwa.js"></script>
   <script src="JS/form.js"></script>
 </body>
 </html>
